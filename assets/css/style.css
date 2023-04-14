@@ -537,6 +537,7 @@ body
         right: 0px;
         top: 0;
         padding: 0 21px;
+        line-height: 46px;
         color: #000!important;
         display: block;
     }
@@ -551,7 +552,7 @@ body
         color: #000!important;
     }
 
-    #header .mobile-menu-btn:hover .ti-menu{
+    #header .mobile-menu-btn:hover .fa-bars{
         color: #000;
     }
 
