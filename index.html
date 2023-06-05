@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/css/all.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackpink Tickets Shop</title>
-    <!-- <link rel="icon" href="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/289699236_1097302464226931_4669708085858019340_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=X6QWr8S5g2kAX9dM416&_nc_ht=scontent.fhan15-1.fna&oh=00_AT8LL1RngMRRX-HOmReM-JiyFUpkp80LCtuBWbdRgE6Wbg&oe=62EF6D31" type="image/x-icon" /> -->
 </head>
 <body>
     <div id="main">
@@ -23,27 +22,29 @@
                         <i class="arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
                     </ul>
                 </li>
             </ul>
             <!-- END NAV -->
-            <!-- BEGIN SEARCH BUTTON-->
-            <div class="search-button">
-                <i class="icon-search fa-solid fa-magnifying-glass"></i>
-            </div>
+            <!-- BEGIN LOG IN/SIGN IN-->
             <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="icon-search fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <!-- END SEARCH BUTTON-->
+            <div id="register">
+                <button class="navbar__item navbar__item--strong navbar__item--separate click-resgister js-signUp">SIGN UP</button>
+                <button class="navbar__item navbar__item--strong btn--login js-signIn">SIGN IN</button>
+            </div>
+            <!-- END SEARCH LOG IN/SIGN IN-->
 
         </div>
-        <div id="slider"  style="background:url(./assets/image/anhnen1.jpg) top center/cover no-repeat;">
+        <div id="slider" style="background:url(./assets/image/anhnen1.jpg) top center/cover no-repeat;" >
+            
             <div class="text-content">
-                <h2 class="text-heading">Los Angeles</h2>
-                <div class="text-description">We had the best time playing at Venice Beach!</div>
+                <h2 class="text-heading">PARIS</h2>
+                <div class="text-description">We had the best time playing at Paris</div>
             </div>
         </div>
         <div id="content">
@@ -102,8 +103,8 @@
                             <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="" class="image-address">
                             <div class="information">
                                 <h3 class="place-heading">LONDON</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <p class="place-time">Fri 27 January 2023</p>
+                                <p class="place-desc">WE HAD GREAT TIME IN LONDON</p>
                                 <button class="buy-ticket js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
@@ -111,8 +112,8 @@
                             <img src="https://www.w3schools.com/w3images/paris.jpg" alt="" class="image-address">
                             <div class="information">
                                 <h3 class="place-heading">PARIS</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <p class="place-time">Sun 02 February 2023</p>
+                                <p class="place-desc">WE HAD GREAT TIME IN PARIS</p>
                                 <button class="buy-ticket js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
@@ -120,8 +121,8 @@
                             <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="" class="image-address">
                             <div class="information">
                                 <h3 class="place-heading">NEW YORK</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <p class="place-time">Thurs 15 March 2023</p>
+                                <p class="place-desc">WE WILL HAVE GREAT TIME IN NEWYORK</p>
                                 <button class="buy-ticket js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
@@ -167,8 +168,9 @@
         <div class="map">
             <img src="./assets/image/map1.jpg" alt="">
         </div>
-        <div class="modal">
-            <div class="modal-container js-modal-container">
+
+        <div class="modal-buy">
+            <div class="modal-buy-container">
                 <div class="modal-close js-modal-close">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -216,7 +218,7 @@
 
     <script>
         const buyBtns=document.querySelectorAll('.js-buy-ticket')
-        const modal=document.querySelector('.modal')
+        const modal=document.querySelector('.modal-buy')
         const modalClose=document.querySelector('.js-modal-close')
         const modalContainer= document.querySelector('.js-modal-container')
         function showBuyTickets(){
@@ -267,5 +269,162 @@
             }
         }
    </script>
+
+   <!-- MODAL -->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+
+                <div class="auth-form">
+                    <div class="auth-form__container .js-modal-container1">
+                        <div class="modal-close js-signUp-close">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">
+                                SIGN UP
+                            </h3>
+                        </div>
+                        <div class="auth-form__content">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại/Email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+                        <div class="auth-form__policy">
+                            <p class="auth-form__policy-text">Bằng việc đăng kí, bạn đã đồng ý với Vanhrr về
+                                <a href="" class="auth-form__policy-link">
+                                    Điểu khoản dịch vụ
+                                </a> &
+                                    <a href="" class="auth-form__policy-link">
+                                    Chính sách bảo mật
+                                </a>
+                            </p>
+                        </div>
+                        <div class="auth-form__control">
+                            <button class="btn">
+                                TRỞ LẠI
+                            </button>
+                            <button class="btn btn--main">
+                                ĐĂNG KÝ
+                            </button>
+                        </div>
+                    </div>
+                    <div class="auth-form__social mt-16">
+                        <a href="" class="btn btn-with-icon">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            Kết nối với Facebook
+                        </a>
+                        <a href="" class="btn btn-with-icon">
+                            <i class="fa-brands fa-google"></i>
+                            Kết nối với Google
+                        </a>
+                    </div>
+                </div> 
+            
+            </div>
+        </div>
+           <!-- MODAL -->
+           <div class="modal--login">
+            <div class="modal__overlay--login"></div>
+            <div class="modal__body--login">
+                
+                <!-- login form -->
+
+                 <div class="auth-form">
+                    <div class="auth-form__container js-modal-container2">
+
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">
+                                Đăng nhập
+                            </h3>
+                            <div class="modal-close js-signIn-close">
+                                <i class="fa-solid fa-x"></i>
+                            </div>
+                        </div>
+                        <div class="auth-form__content">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại/Email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu">
+                            </div>
+                            <a href="" class="auth-form__login-btn">ĐĂNG NHẬP</a>
+                        </div>
+                        <div class="auth-form__dw-login">
+                           
+                            <a href="" class="auth-form__dw-login-link">
+                                Quên mật khẩu
+                            </a> 
+                                <a href="" class="auth-form__dw-login-link">
+                                Đăng nhập với SMS
+                            </a>
+                            
+                        </div>
+    
+                    </div>
+                    <div class="auth-form__social mt-16">
+                        <a href="" class="btn btn-with-icon">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            Kết nối với Facebook
+                        </a>
+                        <a href="" class="btn btn-with-icon">
+                            <i class="fa-brands fa-google"></i>
+                            Kết nối với Google
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <!-- JS SIGN UP -->
+        <script>
+            const signUpBtn=document.querySelectorAll('.js-signUp')
+            const modalSignUp=document.querySelector('.modal')
+            const modalClose1=document.querySelector('.js-signUp-close')
+            const modalContainer1= document.querySelector('.js-modal-container1')
+            function showSignUp(){
+                modalSignUp.classList.add('open')
+            
+            }
+    
+            function hideSignUp(){
+                modalSignUp.classList.remove('open')
+            }
+            for(const BtnSU of signUpBtn){
+                BtnSU.addEventListener('click', showSignUp)
+            }
+            modalClose1.addEventListener('click', hideSignUp)
+            modalContainer1.addEventListener('click',function(event){
+                event.stopPropagation()
+            })
+        </script>
+        <!-- JS login -->
+        <script>
+            const signInBtn=document.querySelectorAll('.js-signIn')
+            const modalSignIn=document.querySelector('.modal--login')
+            const modalClose2=document.querySelector('.js-signIn-close')
+            const modalContainer2= document.querySelector('.js-modal-container2')
+            function showSignIn(){
+                modalSignIn.classList.add('open')
+            
+            }
+    
+            function hideSignIn(){
+                modalSignIn.classList.remove('open')
+            }
+            for(const BtnSI of signInBtn){
+                BtnSI.addEventListener('click', showSignIn)
+            }
+            modalClose2.addEventListener('click', hideSignIn)
+            modalContainer2.addEventListener('click',function(event){
+                event.stopPropagation()
+            })
+        </script>
 </body>
 </html>
